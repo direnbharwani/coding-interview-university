@@ -2,6 +2,8 @@
 
 #include "dynamicArray.h"
 
+// ============================================================================
+
 TEST(DynamicArray, Default_Constructor)
 {
     CIU::DynamicArray<int> array;

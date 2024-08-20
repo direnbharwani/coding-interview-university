@@ -16,6 +16,7 @@ include_directories(${CMAKE_SOURCE_DIR}/src)
 set(TEST_SOURCES
      main.cpp
      test_dynamicArray.cpp
+     test_linkedlist.cpp
 )
 
 add_executable(UnitTests ${TEST_SOURCES})

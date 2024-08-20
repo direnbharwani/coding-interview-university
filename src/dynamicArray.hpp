@@ -2,6 +2,8 @@
 
 #include "dynamicArray.h"
 
+// ============================================================================
+
 namespace CIU
 {
 
@@ -47,6 +49,7 @@ DynamicArray<T>::DynamicArray(DynamicArray<T>&& other)
     , m_size(other.m_size)
     , m_capacity(other.m_capacity)
 {
+    // When we move, the other is left in a valid but unspecified state
     other.m_data     = nullptr;
     other.m_size     = 0;
     other.m_capacity = 0;
@@ -170,6 +173,7 @@ void DynamicArray<T>::insert(size_t index, const T& value)
         resize();
     }
 
+    // Shift all elements to the right
     for (size_t i = m_size; i > index; --i)
     {
         m_data[i] = m_data[i - 1];
@@ -193,6 +197,7 @@ void DynamicArray<T>::deleteAt(size_t index)
         throw std::out_of_range("Index out of range");
     }
 
+    // Shift all elements to the left
     for (size_t i = index; i < m_size - 1; ++i)
     {
         m_data[i] = m_data[i + 1];
@@ -230,6 +235,12 @@ int DynamicArray<T>::find(const T& value)
 template<typename T>
 void DynamicArray<T>::resize()
 {
+    if (m_capacity == 0)
+    {
+        m_capacity = 1;
+    }
+
+    // Double the capacity
     m_capacity <<= 1;
     T* new_data = new T[m_capacity];
 
