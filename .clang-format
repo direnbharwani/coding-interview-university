@@ -1,0 +1,126 @@
+# Refer to this link for more information: https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+Language: Cpp
+BasedOnStyle: Google
+
+AccessModifierOffset: -4
+
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: true
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: true
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossEmptyLines: true
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: true
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: true
+AlignOperands: Align
+AlignTrailingComments: Always
+
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Empty
+AllowShortEnumsOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never  # To avoid conflict, set this "Never" and each "if statement" should include brace when coding
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+
+BinPackArguments: false
+BinPackParameters: false
+
+BitFieldColonSpacing: Both
+
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: MultiLine
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: true
+  BeforeWhile: true
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+BracedInitializerIndentWidth: 4
+
+BreakAdjacentStringLiterals: false
+# BreakAfterAttributes: Never
+# BreakAfterReturnType: TopLevelDefinitions
+BreakBeforeBraces: Allman
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: false
+# BreakTemplateDeclarations: Yes
+
+ColumnLimit: 90
+
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Never
+
+FixNamespaceComments: true
+
+IncludeBlocks: Regroup
+
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: false
+IndentExternBlock: AfterExternBlock
+IndentWidth: 4
+
+InsertBraces: true
+InsertNewlineAtEOF: true
+
+LambdaBodyIndentation: Signature
+
+NamespaceIndentation: None
+
+PackConstructorInitializers: Never
+
+PointerAlignment: Left
+QualifierAlignment: Left
+ReferenceAlignment: Left
+
+RemoveParentheses: Leave
+RemoveSemicolon: false
+
+SeparateDefinitionBlocks: Always
+
+SortIncludes: CaseInsensitive
+
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: After
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpacesInAngles: Never
+SpacesInParens: Never
+
+Standard: c++20
+
+TabWidth: 4
+UseTab: Never
+
